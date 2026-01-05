@@ -1,0 +1,178 @@
+/* 1. BRAND VARIABLES */
+:root {
+    --bg-main: #f2ede4;
+    --bg-alt: #ebe4d8;
+    --text-dark: #1a1a1a;
+    --accent: #5f6f63;
+    --white: #ffffff;
+    --sqs-gutter: 6vw;
+}
+
+/* 2. GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 3. SECTION UPDATES */
+.page-section {
+    padding: 80px var(--sqs-gutter);
+    /* Slightly reduced padding */
+    background-color: transparent;
+}
+
+.page-section:nth-child(even) {
+    background-color: var(--bg-alt);
+}
+
+/* 4. HEADER & NAVIGATION - Fixed Image Size */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px var(--sqs-gutter);
+    /* Compact header */
+    background: var(--bg-main);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand img {
+    height: 60px;
+    /* STRICT LOGO SIZE */
+    width: auto;
+    margin-right: 15px;
+}
+
+.brand h1 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-left: 25px;
+    font-weight: 600;
+}
+
+/* 5. GALLERY GRID & CARDS - Fixed Item Size */
+.gallery-grid {
+    display: grid;
+    /* Changed minmax to 250px so items don't get too huge on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    /* Centers items if there's only one in a row */
+}
+
+.gallery-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 2px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    /* PREVENTS CARDS FROM BEING TOO BIG */
+    transition: transform 0.3s ease;
+}
+
+.img-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #dfd8cd;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+/* Ensures real images inside placeholders fit perfectly */
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* 6. HERO STYLING (To keep text proportional) */
+.hero-line {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Scales between mobile and desktop */
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+/* 7. FOOTER */
+footer {
+    padding: 60px var(--sqs-gutter);
+    background-color: var(--bg-alt);
+    text-align: center;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero {
+    min-height: 70vh;
+    /* Adjust height to your liking */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* THE MAGIC: Dark overlay + Image */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/logo.jpeg');
+
+    background-size: cover;
+    /* Ensures image fills the area */
+    background-position: center;
+    /* Keeps the focus in the middle */
+    background-attachment: fixed;
+    /* Optional: creates a cool parallax effect */
+
+    color: #ffffff;
+    /* Makes the "Pure Joy" text white */
+}
+
+/* Ensure the button stays visible and high-contrast */
+.hero .cta-button {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: none;
+    margin-top: 20px;
+}
+
+.hero .cta-button:hover {
+    background-color: var(--bg-main);
+}
