@@ -56,10 +56,13 @@ body {
 }
 
 .brand img {
-    height: 60px;
-    /* STRICT LOGO SIZE */
-    width: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-right: 15px;
+    background-color: var(--bg-alt);
+    padding: 4px;
 }
 
 .brand h1 {
