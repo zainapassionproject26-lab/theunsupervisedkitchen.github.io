@@ -30,45 +30,83 @@
         </nav>
     </header>
 
-    <section class="page-section" style="background-color: #fcfcfc;">
+    <section class="page-section" style="background-color: var(--bg-alt); padding-bottom: 60px;">
         <div class="content-wrapper text-align-center">
-            <h2 style="font-size: 0.75rem; letter-spacing: 6px; color: var(--accent); margin-bottom: 15px;">GET IN TOUCH
-            </h2>
+            <h2
+                style="font-size: 0.75rem; letter-spacing: 6px; color: var(--accent); margin-bottom: 15px; text-transform: uppercase;">
+                Get In Touch</h2>
             <h1 style="font-size: 2.5rem; letter-spacing: -1px; text-transform: uppercase;">Enquiries</h1>
         </div>
     </section>
 
     <section class="page-section">
         <div class="content-wrapper">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 80px;">
 
                 <div>
-                    <h3 style="font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">
-                        General Enquiries</h3>
-                    <p style="font-weight: 300; margin-bottom: 30px; line-height: 1.8;">
-                        Whether you are looking for a custom cake for a celebration,
-                        wholesale opportunities, or simply have a question about our ingredients,
-                        we would love to hear from you.
-                    </p>
+                    <h3 style="font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px;">
+                        Send a Message</h3>
 
-                    <h3 style="font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">
-                        Email</h3>
-                    <a href="mailto:zainapassionproject26@gmail.com"
-                        style="color: var(--text-dark); text-decoration: underline; font-weight: 700; font-size: 1.1rem;">
-                        zainapassionproject26@gmail.com
-                    </a>
+                    <form action="https://formspree.io/f/xjgkqyba" method="POST">
+                        <div style="margin-bottom: 20px;">
+                            <label
+                                style="display:block; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700;">NAME</label>
+                            <input type="text" name="name" placeholder="Enter your name" required
+                                style="width: 100%; padding: 15px; border: 1px solid #ddd; background: #fff; font-family: 'Inter';">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label
+                                style="display:block; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700;">EMAIL</label>
+                            <input type="email" name="_replyto" placeholder="email@example.com" required
+                                style="width: 100%; padding: 15px; border: 1px solid #ddd; background: #fff; font-family: 'Inter';">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <label
+                                style="display:block; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700;">PHONE
+                                NUMBER</label>
+                            <input type="tel" name="phone" placeholder="Optional"
+                                style="width: 100%; padding: 15px; border: 1px solid #ddd; background: #fff; font-family: 'Inter';">
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <label
+                                style="display:block; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700;">MESSAGE</label>
+                            <textarea name="message" placeholder="Tell us about your custom order or question..."
+                                rows="5" required
+                                style="width: 100%; padding: 15px; border: 1px solid #ddd; background: #fff; font-family: 'Inter'; resize: none;"></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button"
+                            style="width: 100%; border: none; cursor: pointer; padding: 20px; text-transform: uppercase; letter-spacing: 2px;">
+                            Submit Enquiry
+                        </button>
+                    </form>
                 </div>
 
-                <div style="background-color: #f9f9f9; padding: 40px; border-radius: 4px;">
-                    <h3 style="font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">
-                        Follow Our Journey</h3>
-                    <p style="font-weight: 300; margin-bottom: 20px;">
-                        Stay updated with our weekly specials and kitchen experiments.
-                    </p>
-                    <p style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; font-weight: 600;">
-                        Instagram Coming Soon<br>
-                        Facebook Coming Soon
-                    </p>
+                <div style="padding-top: 10px;">
+                    <div style="margin-bottom: 50px;">
+                        <h3
+                            style="font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">
+                            General Enquiries</h3>
+                        <p style="font-weight: 300; line-height: 1.8; color: #555;">
+                            Whether you are looking for a custom cake for a celebration, wholesale opportunities, or
+                            simply have a question about our ingredients, we would love to hear from you!
+                        </p>
+                    </div>
+
+
+                    <div style="background-color: var(--white); padding: 40px; border: 1px solid #eee;">
+                        <h3
+                            style="font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px;">
+                            Follow Us</h3>
+                        <p
+                            style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; font-weight: 600; opacity: 0.5;">
+                            Instagram Coming Soon<br>
+                            Facebook Coming Soon
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -76,8 +114,8 @@
     </section>
 
     <footer>
-        <div class="content-wrapper">
-            <p style="letter-spacing: 3px; margin-bottom: 20px;">THE UNSUPERVISED KITCHEN</p>
+        <div class="content-wrapper text-align-center">
+            <p style="letter-spacing: 3px; font-weight: 600;">THE UNSUPERVISED KITCHEN</p>
         </div>
     </footer>
 

@@ -176,3 +176,16 @@ footer {
 .hero .cta-button:hover {
     background-color: var(--bg-main);
 }
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    color: #999;
+}
