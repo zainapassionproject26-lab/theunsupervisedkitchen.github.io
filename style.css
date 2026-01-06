@@ -45,6 +45,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    text-transform: lowercase;
 }
 
 .brand {
@@ -125,7 +126,7 @@ nav a {
 .hero-line {
     font-size: clamp(2rem, 5vw, 3.5rem);
     /* Scales between mobile and desktop */
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 30px;
@@ -151,8 +152,8 @@ footer {
     text-align: center;
 
     /* THE MAGIC: Dark overlay + Image */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../images/logo.jpeg');
+    background: url('../images/passion.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        ;
 
     background-size: cover;
     /* Ensures image fills the area */
@@ -167,7 +168,7 @@ footer {
 
 /* Ensure the button stays visible and high-contrast */
 .hero .cta-button {
-    background-color: #00aeff;
+    background-color: #ffffff;
     color: #1a1a1a;
     border: none;
     margin-top: 20px;
@@ -190,6 +191,7 @@ footer {
         flex-direction: column;
         text-align: center;
         padding: 20px;
+        text-transform: lowercase;
     }
 
     .brand {
@@ -236,4 +238,25 @@ footer {
     div[style*="padding: 40px"] {
         padding: 20px !important;
     }
+}
+
+.img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Creates a perfect square */
+    overflow: hidden;
+    /* Crops any overlap */
+    margin-bottom: 15px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This zooms and crops the photo professionally */
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
