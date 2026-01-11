@@ -12,6 +12,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- MOBILE FIXES ONLY -->
+    <style>
+        @media (max-width: 768px) {
+
+            /* Header stacking */
+            .site-header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .site-header nav {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            /* Hero section */
+            .hero-line {
+                font-size: 2.8rem !important;
+                text-align: center;
+                letter-spacing: -1px;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                margin: 15px auto 0;
+                display: block;
+            }
+
+            /* About section text */
+            .page-section p {
+                font-size: 1.2rem !important;
+                line-height: 1.5;
+                text-align: center;
+                max-width: 90%;
+                margin: 20px auto;
+            }
+
+            /* About section h1 */
+            .page-section h1 {
+                font-size: 3.5rem !important;
+                text-align: center;
+            }
+
+            /* Recents gallery */
+            .gallery-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px;
+            }
+
+            .gallery-item p {
+                text-align: center;
+                font-size: 0.95rem;
+            }
+
+            /* View full gallery link */
+            .text-align-center a {
+                display: block;
+                margin: 0 auto;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -19,13 +86,14 @@
     <header class="site-header">
         <a href="index.html" class="brand">
             <img src="images/logo.jpeg" alt="logo">
-            <h1 style = "text-transform: lowercase; font-size: 1.5rem;">the unsupervised kitchen.</h1>
+            <h1 style="text-transform: lowercase; font-size: 1.5rem;">the unsupervised kitchen.</h1>
         </a>
 
         <nav>
             <a href="index.html">home</a>
             <a href="gallery.html">gallery</a>
             <a href="technicalities.html">the technicalities</a>
+            <a href="pricing.html">pricing</a>
             <a href="contact.html">contact</a>
         </nav>
     </header>
@@ -39,34 +107,26 @@
 
     <section class="page-section text-align-center">
         <div class="content-wrapper text-align-center">
-            <!-- <h2
-                        style="font-size: 1rem; letter-spacing: 6px; color: var(--accent); margin-bottom: 15px; text-transform: lowercase;">
-                        get in touch</h2> -->
-            <h1 style="font-size: 5rem; letter-spacing: -1px; text-transform: lowercase;">about the kitchen.</h1>
-        </div>
-            <p style="font-size: 1.6rem; line-height: 1.5; font-weight: 300;">
+            <h1 style="font-size: 5rem; letter-spacing: -1px; text-transform: lowercase;">about.</h1>
+            <p>
                 this is a little bit of a passion project. i like my treats sweet, my coffee black and inventing in the kitchen at unhinged hours of night.
-
-                <br>
-                <br>
+                <br><br>
                 i make the classics, spin-offs, really whatever seems like it'll be tasty and can be baked :)
-
-                
-                <br>
-                if there is something that you're craving, want me to try making or anything you need baked for an event (or just for yourself), or if you have questions about ingredients or pricing, CONTACT ME <3
+                <br><br>
+                if there is something that you're craving or anything you need baked for an occasion, or if you have questions about ingredients or pricing, CONTACT ME <3
             </p>
         </div>
     </section>
 
     <section class="page-section">
         <div class="content-wrapper">
-    
+
             <div class="text-align-center" style="margin-bottom: 40px;">
                 <h2 style="font-size: 1rem; letter-spacing: 4px; text-transform: lowercase; color: var(--text-dark);">
                     recents
                 </h2>
             </div>
-    
+
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <div class="img-container">
@@ -74,14 +134,14 @@
                     </div>
                     <p>Cherry Season</p>
                 </div>
-    
+
                 <div class="gallery-item">
                     <div class="img-container">
                         <img src="images/baklava.jpg">
                     </div>
                     <p>Baklava</p>
                 </div>
-    
+
                 <div class="gallery-item">
                     <div class="img-container">
                         <img src="images/saltbread.jpg">
@@ -89,19 +149,21 @@
                     <p>Salt Bread</p>
                 </div>
             </div>
-    
+
             <div class="text-align-center" style="margin-top: 40px;">
                 <a href="gallery.html"
-                    style="text-transform: lowercase; font-size: 0.8rem; letter-spacing: 2px; color: gray; text-decoration: none;">view
-                    full gallery →</a>
+                    style="text-transform: lowercase; font-size: 0.8rem; letter-spacing: 2px; color: gray; text-decoration: none;">
+                    view full gallery →
+                </a>
             </div>
         </div>
-        </section>
+    </section>
 
     <footer>
         <div class="content-wrapper text-align-center">
-            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">the unsupervised
-                kitchen.</p>
+            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">
+                the unsupervised kitchen.
+            </p>
         </div>
     </footer>
 

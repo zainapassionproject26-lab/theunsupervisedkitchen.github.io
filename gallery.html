@@ -12,6 +12,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- MOBILE FIXES ONLY -->
+    <style>
+        @media (max-width: 768px) {
+
+            /* Header */
+            .site-header {
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .site-header nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            /* Gallery layout */
+            .gallery-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px;
+            }
+
+            .gallery-item p {
+                text-align: center;
+                font-size: 0.95rem;
+            }
+
+            /* CTA button */
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -21,351 +58,118 @@
             <img src="images/logo.jpeg" alt="logo">
             <h1 style="text-transform: lowercase; font-size: 1.5rem;">the unsupervised kitchen.</h1>
         </a>
-    
+
         <nav>
             <a href="index.html">home</a>
             <a href="gallery.html">gallery</a>
             <a href="technicalities.html">the technicalities</a>
+            <a href="pricing.html">pricing</a>
             <a href="contact.html">contact</a>
         </nav>
     </header>
 
     <section class="page-section" style="background-color: #fcfcfc; padding-bottom: 20px;">
         <div class="content-wrapper text-align-center">
-            
             <h1 style="font-size: 5rem; letter-spacing: -1px; text-transform: lowercase;">things made before.</h1>
-            <h2 style="font-size: 1.25rem; letter-spacing: 4px; color: var(--accent); margin-bottom: 15px;">this is what i've made in the past (and other random pictures from my camera roll) - use the CONTACT page for requests, pricing and any other questions.</h2>
+            <h2 style="font-size: 1.25rem; letter-spacing: 4px; color: var(--accent); margin-bottom: 15px;">
+                these are some of the things i've made before (and other random pictures from my camera roll) - use the CONTACT page for requests, pricing and any other questions.
+            </h2>
         </div>
     </section>
 
+    <!-- GALLERY SECTIONS -->
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                PRODUCT 1
-            </h3> -->
-
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/cinnascroll.jpg">
-                    </div>
-                    <p>Cinnamon Scrolls</p>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Flower 1.jpg">
-                    </div>
-                    <p>Flower</p>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/baklava.jpg">
-                    </div>
-                    <p>Baklava</p>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/lovebiscuits.jpg">
-                    </div>
-                    <p>Jam Drops</p>
-                </div>
+                <div class="gallery-item"><div class="img-container"><img src="images/cinnascroll.jpg"></div><p>Cinnamon Scrolls</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Flower 1.jpg"></div><p>Flower</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/baklava.jpg"></div><p>Baklava</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/lovebiscuits.jpg"></div><p>Jam Drops</p></div>
             </div>
         </div>
     </section>
 
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                PRODUCT 2
-            </h3> -->
-
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/cherries.jpg">
-                    </div>
-                    <p>Cherries</p>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/cupcake.jpg">
-                    </div>
-                    <p>Choc Mud</p>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Flower 2.jpg">
-                    </div>
-                    <p>flower</p>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/strawberry.jpg">
-                    </div>
-                    <p>Shortcake</p>
-                </div>
+                <div class="gallery-item"><div class="img-container"><img src="images/cherries.jpg"></div><p>Cherries</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/cupcake.jpg"></div><p>Choc Mud</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Flower 2.jpg"></div><p>Flower</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/strawberry.jpg"></div><p>Shortcake</p></div>
             </div>
         </div>
     </section>
 
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                    style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                    PRODUCT 2
-                </h3> -->
-    
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/flower 3.jpg">
-                    </div>
-                    <p>flower</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Tiramisu.jpg">
-                    </div>
-                    <p>Tiramisu</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/souffle.jpg">
-                    </div>
-                    <p>Choc-lava moment</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/pulp.jpg">
-                    </div>
-                    <p>Passion pulp</p>
-                </div>
+                <div class="gallery-item"><div class="img-container"><img src="images/flower 3.jpg"></div><p>Flower</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Tiramisu.jpg"></div><p>Tiramisu</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/souffle.jpg"></div><p>Choc-lava moment</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/pulp.jpg"></div><p>Passion pulp</p></div>
             </div>
         </div>
     </section>
 
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                        style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                        PRODUCT 2
-                    </h3> -->
-    
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/focaccia.jpg">
-                    </div>
-                    <p>Focaccia</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Apple pie.jpg">
-                    </div>
-                    <p>Apple Pie</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Espresso cream cheese.jpg">
-                    </div>
-                    <p>Espresso Cream Cheese</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/flower 4.jpg">
-                    </div>
-                    <p>flower</p>
-                </div>
+                <div class="gallery-item"><div class="img-container"><img src="images/focaccia.jpg"></div><p>Focaccia</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Apple pie.jpg"></div><p>Apple Pie</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Espresso cream cheese.jpg"></div><p>Espresso Cream Cheese</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/flower 4.jpg"></div><p>Flower</p></div>
             </div>
         </div>
     </section>
 
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                    style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                    PRODUCT 1
-                </h3> -->
-    
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Blueberry Tea.jpg">
-                    </div>
-                    <p>Blueberry Tea</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/flower 5.jpg">
-                    </div>
-                    <p>Flower</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Salt bread.jpg">
-                    </div>
-                    <p>SaltBread</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/A bread.jpg">
-                    </div>
-                    <p>A bread</p>
-                </div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Blueberry Tea.jpg"></div><p>Blueberry Tea</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/flower 5.jpg"></div><p>Flower</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Salt bread.jpg"></div><p>SaltBread</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/A bread.jpg"></div><p>A bread</p></div>
             </div>
         </div>
     </section>
 
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                    style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                    PRODUCT 2
-                </h3> -->
-    
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Cherry Dark choc.jpg">
-                    </div>
-                    <p>Cherry Dark Choc</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Profiterole.jpg">
-                    </div>
-                    <p>Profiterole?</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Pomoe.jpg">
-                    </div>
-                    <p>pomegranate</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Honey Almond.jpg">
-                    </div>
-                    <p>Honey Almond</p>
-                </div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Cherry Dark choc.jpg"></div><p>Cherry Dark Choc</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Profiterole.jpg"></div><p>Profiterole?</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Pomoe.jpg"></div><p>Pomegranate</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Honey Almond.jpg"></div><p>Honey Almond</p></div>
             </div>
         </div>
     </section>
 
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                        style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                        PRODUCT 2
-                    </h3> -->
-    
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Mangoe.jpg">
-                    </div>
-                    <p>mango</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Choc tres leches.jpg">
-                    </div>
-                    <p>Choc tres leches</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Donut.jpg">
-                    </div>
-                    <p>Donut</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/flower 6.jpg">
-                    </div>
-                    <p>Flower</p>
-                </div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Mangoe.jpg"></div><p>Mango</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Choc tres leches.jpg"></div><p>Choc tres leches</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Donut.jpg"></div><p>Donut</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/flower 6.jpg"></div><p>Flower</p></div>
             </div>
         </div>
     </section>
 
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                            style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                            PRODUCT 2
-                        </h3> -->
-    
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Custard and Carbs.jpg">
-                    </div>
-                    <p>Custard and Carb</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Frenchie.jpg">
-                    </div>
-                    <p>Frenchie</p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/brown.jpg">
-                    </div>
-                    <p>brownie
-                    </p>
-                </div>
-    
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Macaron.jpg">
-                    </div>
-                    <p>Macaron</p>
-                </div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Custard and Carbs.jpg"></div><p>Custard and Carb</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Frenchie.jpg"></div><p>Frenchie</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/brown.jpg"></div><p>Brownie</p></div>
+                <div class="gallery-item"><div class="img-container"><img src="images/Macaron.jpg"></div><p>Macaron</p></div>
             </div>
         </div>
     </section>
 
     <section class="page-section" style="padding-top: 40px;">
         <div class="content-wrapper">
-            <!-- <h3
-                    style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 40px;">
-                    PRODUCT 1
-                </h3> -->
-    
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/Cookie.jpg">
-                    </div>
-                    <p>Cookie</p>
-                </div>
-    
+                <div class="gallery-item"><div class="img-container"><img src="images/Cookie.jpg"></div><p>Cookie</p></div>
             </div>
         </div>
     </section>
@@ -381,11 +185,11 @@
 
     <footer>
         <div class="content-wrapper text-align-center">
-            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">the unsupervised
-                kitchen.</p>
+            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">
+                the unsupervised kitchen.
+            </p>
         </div>
     </footer>
 
 </body>
-
 </html>
