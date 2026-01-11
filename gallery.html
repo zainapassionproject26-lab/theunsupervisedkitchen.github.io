@@ -5,50 +5,13 @@
     <meta charset="UTF-8">
     <title>gallery - the unsupervised kitchen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- MOBILE FIXES ONLY -->
-    <style>
-        @media (max-width: 768px) {
-
-            /* Header */
-            .site-header {
-                flex-direction: column;
-                padding: 15px;
-                gap: 15px;
-            }
-
-            .site-header nav {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-
-            /* Gallery layout */
-            .gallery-grid {
-                grid-template-columns: 1fr !important;
-                gap: 25px;
-            }
-
-            .gallery-item p {
-                text-align: center;
-                font-size: 0.95rem;
-            }
-
-            /* CTA button */
-            .cta-button {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -56,10 +19,10 @@
     <header class="site-header">
         <a href="index.html" class="brand">
             <img src="images/logo.jpeg" alt="logo">
-            <h1 style="text-transform: lowercase; font-size: 1.5rem;">the unsupervised kitchen.</h1>
+            <span class="brand-name">the unsupervised kitchen.</span>
         </a>
 
-        <nav>
+        <nav class="site-nav">
             <a href="index.html">home</a>
             <a href="gallery.html">gallery</a>
             <a href="technicalities.html">the technicalities</a>
@@ -68,128 +31,252 @@
         </nav>
     </header>
 
-    <section class="page-section" style="background-color: #fcfcfc; padding-bottom: 20px;">
-        <div class="content-wrapper text-align-center">
-            <h1 style="font-size: 5rem; letter-spacing: -1px; text-transform: lowercase;">things made before.</h1>
-            <h2 style="font-size: 1.25rem; letter-spacing: 4px; color: var(--accent); margin-bottom: 15px;">
-                these are some of the things i've made before (and other random pictures from my camera roll) - use the CONTACT page for requests, pricing and any other questions.
-            </h2>
+    <section class="page-section" style="background-color: var(--white); padding-bottom: 20px;">
+        <div class="content-wrapper">
+            <h1 style="font-size: 3rem; letter-spacing: -2px; margin-bottom: 1rem; font-weight: 700; text-align: left;">
+                things made before.
+            </h1>
+            <p
+                style="font-size: 0.85rem; letter-spacing: 2px; color: var(--accent); text-transform: lowercase; font-weight: 600; max-width: 800px; margin: 0; line-height: 1.8; text-align: left;">
+                these are some of the things i've made before (and other random pictures from my camera roll) <br><br>
+                use the
+                contact page for requests, pricing and any other questions.
+            </p>
         </div>
     </section>
 
-    <!-- GALLERY SECTIONS -->
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/cinnascroll.jpg"></div><p>Cinnamon Scrolls</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Flower 1.jpg"></div><p>Flower</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/baklava.jpg"></div><p>Baklava</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/lovebiscuits.jpg"></div><p>Jam Drops</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/cinnascroll.jpg" alt="Cinnamon Scrolls"></div>
+                    <p>Cinnamon Scrolls</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Flower 1.jpg" alt="Flower"></div>
+                    <p>Flower</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/baklava.jpg" alt="Baklava"></div>
+                    <p>Baklava</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/lovebiscuits.jpg" alt="Jam Drops"></div>
+                    <p>Jam Drops</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/cherries.jpg"></div><p>Cherries</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/cupcake.jpg"></div><p>Choc Mud</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Flower 2.jpg"></div><p>Flower</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/strawberry.jpg"></div><p>Shortcake</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/cherries.jpg" alt="Cherries"></div>
+                    <p>Cherries</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/cupcake.jpg" alt="Choc Mud"></div>
+                    <p>Choc Mud</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Flower 2.jpg" alt="Flower"></div>
+                    <p>Flower</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/strawberry.jpg" alt="Shortcake"></div>
+                    <p>Shortcake</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/flower 3.jpg"></div><p>Flower</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Tiramisu.jpg"></div><p>Tiramisu</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/souffle.jpg"></div><p>Choc-lava moment</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/pulp.jpg"></div><p>Passion pulp</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/flower 3.jpg" alt="Flower"></div>
+                    <p>Flower</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Tiramisu.jpg" alt="Tiramisu"></div>
+                    <p>Tiramisu</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/souffle.jpg" alt="Choc-lava moment"></div>
+                    <p>Choc-lava moment</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/pulp.jpg" alt="Passion pulp"></div>
+                    <p>Passion pulp</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/focaccia.jpg"></div><p>Focaccia</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Apple pie.jpg"></div><p>Apple Pie</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Espresso cream cheese.jpg"></div><p>Espresso Cream Cheese</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/flower 4.jpg"></div><p>Flower</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/focaccia.jpg" alt="Focaccia"></div>
+                    <p>Focaccia</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Apple pie.jpg" alt="Apple Pie"></div>
+                    <p>Apple Pie</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Espresso cream cheese.jpg" alt="Espresso Cream Cheese">
+                    </div>
+                    <p>Espresso Cream Cheese</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/flower 4.jpg" alt="Flower"></div>
+                    <p>Flower</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/Blueberry Tea.jpg"></div><p>Blueberry Tea</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/flower 5.jpg"></div><p>Flower</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Salt bread.jpg"></div><p>SaltBread</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/A bread.jpg"></div><p>A bread</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Blueberry Tea.jpg" alt="Blueberry Tea"></div>
+                    <p>Blueberry Tea</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/flower 5.jpg" alt="Flower"></div>
+                    <p>Flower</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Salt bread.jpg" alt="Salt Bread"></div>
+                    <p>SaltBread</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/A bread.jpg" alt="A bread"></div>
+                    <p>A bread</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/Cherry Dark choc.jpg"></div><p>Cherry Dark Choc</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Profiterole.jpg"></div><p>Profiterole?</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Pomoe.jpg"></div><p>Pomegranate</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Honey Almond.jpg"></div><p>Honey Almond</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Cherry Dark choc.jpg" alt="Cherry Dark Choc"></div>
+                    <p>Cherry Dark Choc</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Profiterole.jpg" alt="Profiterole"></div>
+                    <p>Profiterole?</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Pomoe.jpg" alt="Pomegranate"></div>
+                    <p>Pomegranate</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Honey Almond.jpg" alt="Honey Almond"></div>
+                    <p>Honey Almond</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/Mangoe.jpg"></div><p>Mango</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Choc tres leches.jpg"></div><p>Choc tres leches</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Donut.jpg"></div><p>Donut</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/flower 6.jpg"></div><p>Flower</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Mangoe.jpg" alt="Mango"></div>
+                    <p>Mango</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Choc tres leches.jpg" alt="Choc tres leches"></div>
+                    <p>Choc tres leches</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Donut.jpg" alt="Donut"></div>
+                    <p>Donut</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/flower 6.jpg" alt="Flower"></div>
+                    <p>Flower</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/Custard and Carbs.jpg"></div><p>Custard and Carb</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Frenchie.jpg"></div><p>Frenchie</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/brown.jpg"></div><p>Brownie</p></div>
-                <div class="gallery-item"><div class="img-container"><img src="images/Macaron.jpg"></div><p>Macaron</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Custard and Carbs.jpg" alt="Custard and Carb"></div>
+                    <p>Custard and Carb</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Frenchie.jpg" alt="Frenchie"></div>
+                    <p>Frenchie</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/brown.jpg" alt="Brownie"></div>
+                    <p>Brownie</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Macaron.jpg" alt="Macaron"></div>
+                    <p>Macaron</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section" style="padding-top: 40px;">
+    <section class="gallery-section">
         <div class="content-wrapper">
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="img-container"><img src="images/Cookie.jpg"></div><p>Cookie</p></div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/Cookie.jpg" alt="Cookie"></div>
+                    <p>Cookie</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/flower 7.jpg" alt="Cookie"></div>
+                    <p>Flower</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-container"><img src="images/scones.jpg" alt="Cookie"></div>
+                    <p>Scone</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section text-align-center" style="background-color: #f9f9f9;">
+    <section class="page-section text-align-center" style="background-color: var(--white);">
         <div class="content-wrapper">
-            <p style="margin-bottom: 10px; font-weight: 300; font-size: 1.1rem;">
+            <p style="margin-bottom: 2rem; font-weight: 400; font-size: 1.2rem;">
                 got something you want me to make, either from here or your own thing?
             </p>
             <a class="cta-button" href="contact.html">contact me now</a>
         </div>
     </section>
 
-    <footer>
-        <div class="content-wrapper text-align-center">
-            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">
-                the unsupervised kitchen.
-            </p>
+    <footer class="site-footer">
+        <div class="content-wrapper">
+            <p style="font-weight: 600;">the unsupervised kitchen.</p>
         </div>
     </footer>
 
+    <script>
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.site-header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
+
 </html>

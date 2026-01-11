@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <title>contact - the unsupervised kitchen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,10 +19,10 @@
     <header class="site-header">
         <a href="index.html" class="brand">
             <img src="images/logo.jpeg" alt="logo">
-            <h1 style="text-transform: lowercase; font-size: 1.5rem;">the unsupervised kitchen.</h1>
+            <span class="brand-name">the unsupervised kitchen.</span>
         </a>
-    
-        <nav>
+
+        <nav class="site-nav">
             <a href="index.html">home</a>
             <a href="gallery.html">gallery</a>
             <a href="technicalities.html">the technicalities</a>
@@ -33,76 +33,56 @@
 
     <section class="page-section" style="background-color: var(--bg-alt); padding-bottom: 60px;">
         <div class="content-wrapper text-align-center">
-            <h1 class="page-title">contact us.</h1>
+            <h1 style="font-size: 3.5rem; letter-spacing: -2px; margin-bottom: 1.5rem; font-weight: 700;">contact us.
+            </h1>
+            <p style="max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem;">
+                whether you'd like to chat about a custom request, make an order, ask about pricing, or have any
+                questions about how and what we do, we'd love to hear from you &lt;3
+            </p>
         </div>
-        <div style="margin-bottom: 50px;">
-                        <p style="font-size: 1.2rem; font-weight: 300; line-height: 1.8; color: #080808;">
-                            i am based in Canberra, ACT. <br><br>
-                            whether you'd like to chat about a custom request, make an order, ask about pricing, <br> or have any questions about how and what we do, we'd love to hear from you &lt;3
-                        </p>
-                    </div>
     </section>
 
     <section class="page-section">
         <div class="content-wrapper">
-            <div class="contact-grid">
+            <div class="contact-layout">
 
-                <div>
+                <div class="contact-form-container">
                     <form action="https://formspree.io/f/xjgkqyba" method="POST">
-                        <div style="margin-bottom: 20px;">
-                            <label
-                                style="display:block; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700;">name</label>
-                            <input type="text" name="name" placeholder="your good name here pls" required
-                                style="width: 100%; padding: 15px; border: 1px solid #ddd; background: #fff; font-family: 'Inter';">
+                        <div class="input-group">
+                            <label>name</label>
+                            <input type="text" name="name" placeholder="your good name here pls" required>
                         </div>
 
-                        <div style="margin-bottom: 20px;">
-                            <label
-                                style="display:block; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700;">email</label>
-                            <input type="email" name="_replyto" placeholder="email@example.com" required
-                                style="width: 100%; padding: 15px; border: 1px solid #ddd; background: #fff; font-family: 'Inter';">
+                        <div class="input-group">
+                            <label>email</label>
+                            <input type="email" name="_replyto" placeholder="email@example.com" required>
                         </div>
 
-                        <div style="margin-bottom: 20px;">
-                            <label
-                                style="display:block; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700;">phone
-                                number</label>
-                            <input type="tel" name="phone" placeholder="best contact number here pls"
-                                style="width: 100%; padding: 15px; border: 1px solid #ddd; background: #fff; font-family: 'Inter';">
+                        <div class="input-group">
+                            <label>phone number</label>
+                            <input type="tel" name="phone" placeholder="best contact number here pls">
                         </div>
 
-                        <div style="margin-bottom: 30px;">
-                            <label
-                                style="display:block; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 5px; font-weight: 700;">tell us what we can do for you</label>
+                        <div class="input-group">
+                            <label>tell us what we can do for you</label>
                             <textarea name="message"
                                 placeholder="ask us your questions, enquire about an order and be sure to clearly state your allergies and dietaries..."
-                                rows="5" required
-                                style="width: 100%; padding: 15px; border: 1px solid #ddd; background: #fff; font-family: 'Inter'; resize: none;"></textarea>
+                                rows="6" required></textarea>
                         </div>
 
-                        <button type="submit" class="cta-button"
-                            style="width: 100%; border: none; cursor: pointer; padding: 20px; background: rgb(97, 19, 19); color: rgb(255, 255, 255); text-transform: uppercase; letter-spacing: 2px;">
-                            Submit Enquiry
-                        </button>
+                        <button type="submit" class="submit-btn">Submit Enquiry</button>
                     </form>
                 </div>
 
-                <div style="padding-top: 10px;">
-                    
-
-                    <div style="background-color: var(--white); padding: 40px; border: 1px solid #eee;">
-                        <h3
-                            style="font-size: 1.5rem; letter-spacing: 2px; text-transform: lowercase; margin-bottom: 15px;">
-                            our pages ↓</h3>
-
-                        <a href="https://www.facebook.com/people/The-Unsupervised-Kitchen/61586124206662/" target="_blank">
-                            <img src="images/facebook.png"
-                                style="width: 75px; height: 75px; margin-right: 3rem;">
+                <div class="social-side-card">
+                    <h3>keep up with what we do ↓</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/The-Unsupervised-Kitchen/61586124206662/"
+                            target="_blank">
+                            <img src="images/facebook.png" alt="Facebook">
                         </a>
-
-                        <a href="https://www.instagram.com/theunsupervisedkitchen/?igsh=MTBodzlvYWE5emY5bg%3D%3D&utm_source=qr#" target="_blank">
-                            <img src="images/insta.jpg"
-                                style="width: 75px; height: 75px;">
+                        <a href="https://www.instagram.com/theunsupervisedkitchen/" target="_blank">
+                            <img src="images/insta.jpg" alt="Instagram">
                         </a>
                     </div>
                 </div>
@@ -111,13 +91,24 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="site-footer">
         <div class="content-wrapper text-align-center">
-            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">
-                the unsupervised kitchen.
-            </p>
+            <p style="font-weight: 600;">the unsupervised kitchen.</p>
         </div>
     </footer>
 
+    <script>
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
+
 </html>

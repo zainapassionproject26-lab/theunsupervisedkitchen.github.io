@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>pricing - the unsupervised kitchen</title>
+    <title>pricing — the unsupervised kitchen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,10 +19,10 @@
     <header class="site-header">
         <a href="index.html" class="brand">
             <img src="images/logo.jpeg" alt="logo">
-            <h1 style="text-transform: lowercase; font-size: 1.5rem;">the unsupervised kitchen.</h1>
+            <span class="brand-name">the unsupervised kitchen.</span>
         </a>
-    
-        <nav>
+
+        <nav class="site-nav">
             <a href="index.html">home</a>
             <a href="gallery.html">gallery</a>
             <a href="technicalities.html">the technicalities</a>
@@ -31,49 +31,92 @@
         </nav>
     </header>
 
-    <section class="page-section" style="background-color: #fcfcfc;">
+    <section class="page-section" style="background-color: var(--white); padding-bottom: 40px;">
         <div class="content-wrapper text-align-center">
-            <h1 class="page-title">pricing.</h1>
+            <h1 style="font-size: 3.5rem; letter-spacing: -2px; margin-bottom: 1.5rem; font-weight: 700;">pricing.</h1>
+            <p style="max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                so here's the idea. you tell me what you'd like me to make and then we chat pricing accordingly.
+                <br><br>
+                <span
+                    style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; font-weight: 700; color: var(--accent);">
+                    you are not limited to the items in the gallery.
+                </span>
+                <br><br>
+                <b>this is roughly what to expect in terms of pricing:</b>
+            </p>
         </div>
     </section>
 
-    <section class="page-section">
+    <section class="page-section" style="background-color: var(--bg-alt); padding-top: 60px;">
         <div class="content-wrapper">
-            <div class="center-stack">
-                <p class="section-text">
-                    so here's the idea. you tell me what you'd like me to make for you and then we chat about pricing accordingly.<br>
-                    (YOU ARE NOT LIMITED TO THE ITEMS IN THE GALLERY)
-                    <br><br>
-                    IN SAYING THAT, these are roughly the prices you can expect:
-                    <br><br>
-                    simple cakes, bakes and classic things — one cake* — from $30<br>
-                    modern classics that are not your usual — one cake — from $35<br>
-                    uniquely curated flavour combos — one cake — from $40<br>
-                    savoury bakes — a bread — from $30<br>
-                    a slightly niche custom invention — from $45
-                    <br><br><br>
-                    *one cake is interchangeable with one loaf, one bread, a batch of eight — depending on the item you'd like
-                    <br><br>
-                    again, final price will be subject to the specifics of what you're ordering — visit the contact page to enquire or order!
+            <div class="pricing-grid">
+                <article class="price-card">
+                    <h3>a classic</h3>
+                    <p>simple cakes and bakes</p>
+                    <span class="price">from $30</span>
+                </article>
+
+                <article class="price-card">
+                    <h3>a modern classic</h3>
+                    <p>the classics with a twist in flavour</p>
+                    <span class="price">from $35</span>
+                </article>
+
+                <article class="price-card">
+                    <h3>a niche flavour mix</h3>
+                    <p>intentional and unexpected flavour pairing</p>
+                    <span class="price">from $40</span>
+                </article>
+
+                <article class="price-card">
+                    <h3>a savoury thing</h3>
+                    <p>breads and savoury type things</p>
+                    <span class="price">from $30</span>
+                </article>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                <article class="price-card featured">
+                    <h3>a custom invention</h3>
+                    <p>experimental and uniquely yours</p>
+                    <span class="price">from $45</span>
+                </article>
+            </div>
+
+            <div class="notes" style="margin-top: 4rem; text-align: center; margin-bottom: -4rem; font-size: 0.9rem; color: var(--accent);">
+                <p>
+                    * one item may be a cake, loaf, bread or batch of eight — depending on what you'd like.
+                    <br>
+                    final pricing depends on ingredients, size & complexity of your order.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="page-section text-align-center">
+    <section class="page-section text-align-center" style="background-color: var(--beige);">
         <div class="content-wrapper">
-            <a class="cta-button" href="gallery.html"></a>
+            <a href="contact.html" class="cta-button">enquire or order</a>
         </div>
     </section>
 
-    <footer>
+    <footer class="site-footer">
         <div class="content-wrapper text-align-center">
-            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">
-                the unsupervised kitchen.
-            </p>
+            <p style="font-weight: 600;">the unsupervised kitchen.</p>
         </div>
     </footer>
 
+    <script>
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
 
 </html>

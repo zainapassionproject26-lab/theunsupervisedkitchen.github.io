@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <title>the technicalities - the unsupervised kitchen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,10 +19,10 @@
     <header class="site-header">
         <a href="index.html" class="brand">
             <img src="images/logo.jpeg" alt="logo">
-            <h1 style="text-transform: lowercase; font-size: 1.5rem;">the unsupervised kitchen.</h1>
+            <span class="brand-name">the unsupervised kitchen.</span>
         </a>
-    
-        <nav>
+
+        <nav class="site-nav">
             <a href="index.html">home</a>
             <a href="gallery.html">gallery</a>
             <a href="technicalities.html">the technicalities</a>
@@ -31,55 +31,68 @@
         </nav>
     </header>
 
-    <section class="page-section" style="background-color: #fcfcfc;">
+    <section class="page-section" style="background-color: var(--white); padding-bottom: 20px;">
         <div class="content-wrapper text-align-center">
-            <h1 class="page-title">the technicalities.</h1>
+            <h1 style="font-size: 3.5rem; letter-spacing: -2px; margin-bottom: 1rem; font-weight: 700;">the
+                technicalities.</h1>
         </div>
     </section>
 
     <section class="page-section">
-        <div class="content-wrapper">
-            <div class="center-stack">
-                <h3 class="section-heading">allergens</h3>
-                <p class="section-text">
-                    PLEASE please let me know if you have any food allergies.<br><br>
-                    i handle common allergens in the kitchen as i bake a variety of things.<br>
-                    if i am informed, i'll know to take extra care.<br><br>
-                    i will not carry the liability in the case of any miscommunication.
-                </p>
-            </div>
+        <div class="content-wrapper text-align-center">
+            <h3
+                style="text-transform: uppercase; font-size: 1rem; letter-spacing: 3px; color: var(--accent); margin-bottom: 1.5rem;">
+                allergens</h3>
+            <p style="max-width: 600px; margin: 0 auto; line-height: 1.8;">
+                PLEASE please let me know if you have any food allergies.<br><br>
+                i handle common allergens in the kitchen as i bake a variety of things.<br>
+                if i am informed, i'll know to take extra care.<br><br>
+                i will not carry the liability in the case of any miscommunication.
+            </p>
         </div>
     </section>
 
-    <section class="page-section" style="background-color: #f9f9f9;">
-        <div class="content-wrapper">
-            <div class="center-stack">
-                <h3 class="section-heading">dietaries</h3>
-                <p class="section-text">
-                    everything is halal and alcohol-free.<br>
-                    (if you like liqueur in your tiramisu, i suggest you find another bakery)<br><br>
-                    it can almost always be made vegetarian,<br>
-                    it can't always be made vegan (sorry, i can't give up butter).<br><br>
-                    enquire if you're unsure about your situation and we'll find a way around!
-                </p>
-            </div>
+    <section class="page-section" style="background-color: var(--bg-alt);">
+        <div class="content-wrapper text-align-center">
+            <h3
+                style="text-transform: uppercase; font-size: 1rem; letter-spacing: 3px; color: var(--accent); margin-bottom: 1.5rem;">
+                dietaries</h3>
+            <p style="max-width: 600px; margin: 0 auto; line-height: 1.8;">
+                everything is halal and alcohol-free.<br>
+                (if you like liqueur in your tiramisu, i suggest you find another bakery)<br><br>
+                it can almost always be made vegetarian,<br>
+                it can't always be made vegan (sorry, butter is a difficult sacrifice).<br><br>
+                enquire if you're unsure about your situation and we'll find a way around!
+            </p>
         </div>
     </section>
 
     <section class="page-section text-align-center">
         <div class="content-wrapper">
-            <a class="cta-button" href="gallery.html"></a>
+            <p style="margin-bottom: 2rem; font-weight: 400; font-size: 1.1rem;">ready to eat well?</p>
+            <a class="cta-button" href="contact.html">order now</a>
         </div>
     </section>
 
-    <footer>
+    <footer class="site-footer">
         <div class="content-wrapper text-align-center">
-            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">
-                the unsupervised kitchen.
-            </p>
+            <p style="font-weight: 600;">the unsupervised kitchen.</p>
         </div>
     </footer>
 
+    <script>
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.site-header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
 
 </html>

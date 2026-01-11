@@ -9,87 +9,20 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- MOBILE FIXES ONLY -->
-    <style>
-        @media (max-width: 768px) {
-
-            /* Header stacking */
-            .site-header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px;
-            }
-
-            .site-header nav {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                align-items: center;
-            }
-
-            /* Hero section */
-            .hero-line {
-                font-size: 2.8rem !important;
-                text-align: center;
-                letter-spacing: -1px;
-            }
-
-            .cta-button {
-                width: 100%;
-                max-width: 300px;
-                margin: 15px auto 0;
-                display: block;
-            }
-
-            /* About section text */
-            .page-section p {
-                font-size: 1.2rem !important;
-                line-height: 1.5;
-                text-align: center;
-                max-width: 90%;
-                margin: 20px auto;
-            }
-
-            /* About section h1 */
-            .page-section h1 {
-                font-size: 3.5rem !important;
-                text-align: center;
-            }
-
-            /* Recents gallery */
-            .gallery-grid {
-                grid-template-columns: 1fr !important;
-                gap: 25px;
-            }
-
-            .gallery-item p {
-                text-align: center;
-                font-size: 0.95rem;
-            }
-
-            /* View full gallery link */
-            .text-align-center a {
-                display: block;
-                margin: 0 auto;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
     <header class="site-header">
         <a href="index.html" class="brand">
-            <img src="images/logo.jpeg" alt="logo">
-            <h1 style="text-transform: lowercase; font-size: 1.5rem;">the unsupervised kitchen.</h1>
+            <img src="images/logo.jpeg" alt="the unsupervised kitchen logo">
+            <span class="brand-name">the unsupervised kitchen.</span>
         </a>
 
-        <nav>
+        <nav class="site-nav">
             <a href="index.html">home</a>
             <a href="gallery.html">gallery</a>
             <a href="technicalities.html">the technicalities</a>
@@ -98,75 +31,83 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero hero-home">
         <div class="content-wrapper">
             <h1 class="hero-line">the unsupervised kitchen.</h1>
-            <a class="cta-button" href="gallery.html"></a>
+            <!-- <a class="cta-button" href="gallery.html">view the gallery</a> -->
         </div>
     </section>
 
     <section class="page-section text-align-center">
-        <div class="content-wrapper text-align-center">
-            <h1 style="font-size: 5rem; letter-spacing: -1px; text-transform: lowercase;">about.</h1>
-            <p>
-                this is a little bit of a passion project. i like my treats sweet, my coffee black and inventing in the kitchen at unhinged hours of night.
-                <br><br>
-                i make the classics, spin-offs, really whatever seems like it'll be tasty and can be baked :)
-                <br><br>
-                if there is something that you're craving or anything you need baked for an occasion, or if you have questions about ingredients or pricing, CONTACT ME <3
+        <div class="content-wrapper">
+            <h2 style="font-size: 3rem; letter-spacing: -1px; margin-bottom: 2rem;text-align: left;">about.</h2>
+            <p style="text-align: left;">
+                this is a little bit of a passion project. i like my treats sweet, my coffee black and inventing in the
+                kitchen at unhinged hours of night.
             </p>
+            <p style="margin-top: 1.5rem; text-align: left;">
+                i make the classics, spin-offs, really whatever seems like it'll be tasty and can be baked :)
+            </p>
+            <p style="margin-top: 1.5rem;text-align: left;">
+                if there is something that you're craving or anything you need baked for an occasion, or if you have
+                questions about ingredients or pricing, <strong>hit the <a href="contact.html" style="color: var(--bg);"><u>CONTACT</u></a> page!!</strong>
+            </p>
+            <p style="margin-top: 2rem; font-weight: 700; letter-spacing: 1px;"><br>BASED IN CANBERRA</p>
         </div>
     </section>
 
-    <section class="page-section">
+    <section class="page-section home-gallery-wrapper" style="background-color: var(--bg-alt);">
         <div class="content-wrapper">
-
-            <div class="text-align-center" style="margin-bottom: 40px;">
-                <h2 style="font-size: 1rem; letter-spacing: 4px; text-transform: lowercase; color: var(--text-dark);">
+            <div class="text-align-center">
+                <h2
+                    style="font-size: 1rem; letter-spacing: 4px; text-transform: lowercase; opacity: 0.6; margin-bottom: 30px;">
                     recents
                 </h2>
             </div>
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/cherries.jpg">
-                    </div>
+                    <div class="img-container"><img src="images/cherries.jpg"></div>
                     <p>Cherry Season</p>
                 </div>
-
                 <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/baklava.jpg">
-                    </div>
+                    <div class="img-container"><img src="images/baklava.jpg"></div>
                     <p>Baklava</p>
                 </div>
-
                 <div class="gallery-item">
-                    <div class="img-container">
-                        <img src="images/saltbread.jpg">
-                    </div>
+                    <div class="img-container"><img src="images/saltbread.jpg"></div>
                     <p>Salt Bread</p>
                 </div>
             </div>
-
-            <div class="text-align-center" style="margin-top: 40px;">
-                <a href="gallery.html"
-                    style="text-transform: lowercase; font-size: 0.8rem; letter-spacing: 2px; color: gray; text-decoration: none;">
-                    view full gallery →
-                </a>
-            </div>
+        </div>
+        <div style="margin-top: 2rem;">
+            <a href="gallery.html"
+                class="cta-button"; style="font-size: 0.8rem; letter-spacing: 2px; color: beige; font-weight: 600;  margin-left: 10rem;">
+                see what's baking now →
+            </a>
         </div>
     </section>
 
-    <footer>
-        <div class="content-wrapper text-align-center">
-            <p style="letter-spacing: 3px; font-weight: 600; text-transform: lowercase;font-size: 0.9rem;">
-                the unsupervised kitchen.
-            </p>
+    <footer class="site-footer">
+        <div class="content-wrapper">
+            <p style="font-weight: 600;">the unsupervised kitchen.</p>
         </div>
     </footer>
+    <script>
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.site-header');
 
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                // Scrolling Down - Hide Header
+                header.classList.add('header-hidden');
+            } else {
+                // Scrolling Up - Show Header
+                header.classList.remove('header-hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
 
 </html>
